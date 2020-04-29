@@ -14,7 +14,7 @@ insert into g values
 create table tg(
     i integer,
     tid varchar(255) primary key,
-    foreign key(i) references g(i)
+    org varchar(255)
 );
 
-insert into tg (select i, format('g.%s', i) from g);
+insert into tg (select i, format('g.%s', i), format('g.%s', i) from g);
