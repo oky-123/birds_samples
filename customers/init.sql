@@ -1,11 +1,15 @@
-create table if not exists nation (
-    key integer primary key,
+drop view if exists jcustomer;
+drop table if exists customer;
+drop table if exists nation;
+
+create table nation (
+    key serial primary key,
     name character varying(100),
     description text
 );
 
-create table if not exists customer (
-    key integer primary key,
+create table customer (
+    key serial primary key,
     name character varying(50),
     address character varying(50),
     phone integer,
