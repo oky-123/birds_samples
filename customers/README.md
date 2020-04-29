@@ -14,18 +14,19 @@ dangtv/birds
 ## コンパイル
 
 ```
-birds -v -f basic_sample.dl -o customers_view.sql
+birds -v -f customers_view.dl -o customers_view.sql
 ```
 
 ## ソーステーブルの作成
-
-自分でやるみたい...
 
 ```
 psql -U postgres -d postgres -f init.sql
 ```
 
 ## Viewの作成
+
+Viewの作成方法としてはUpdate Strategyを記述することによってView Definitionを導出する
+
 
 ```
 psql -U postgres -d postgres -f customers_view.sql
