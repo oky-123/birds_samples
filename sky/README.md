@@ -28,7 +28,3 @@ psql -U postgres -d postgres -f init.sql
 ```
 psql -U postgres -d postgres -f g_view.sql
 ```
-
-## 疑問
-
-- データ型はpostgres上ではどうなる？
