@@ -1,0 +1,6 @@
+source base_g('I': int).
+view tid_g('I': int, 'ORG': string).
+
+tid_g(I, 'g') :- base_g(I).
++base_g(I) :- not base_g(I), tid_g(I, 'g').
+-base_g(I) :- base_g(I), not tid_g(I, 'g').
